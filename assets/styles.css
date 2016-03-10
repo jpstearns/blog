@@ -1,9 +1,24 @@
+/********************************************************
+JP Stearns
+03-09-2016
+Blog: Css Source code for project 2
+********************************************************/
+
+/****Global Styles*****/
 body{
     background-image: url("./images/city.jpg");
     background-attachment: fixed;
     background-repeat: no-repeat;
     font-family: "Roboto Slab", serif;
     margin: 0px;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+a:hover{
+    color: #17BB34;
+    text-decoration: underline;
 }
 .container {
   margin: 0 auto;
@@ -86,9 +101,9 @@ h2{
     line-height: 15.4px;
 }
 
-/******Profile*****/
+/******Profile Section*****/
 #profile{
-    margin-top: 125vpx;
+    margin-top: 125px;
 }
 form{
     margin-left: 100px;
@@ -107,6 +122,17 @@ form label{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
+#profile form select{
+    width: 80%;
+    height: 34px;
+    background-color:#ffffff;
+    display: inline-block;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+#profile textarea{
+    width: 80%;
+}
 #submit{
     color: #fff;
     background-color: #337ab7;
@@ -123,19 +149,14 @@ form label{
     vertical-align: middle;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    cursor: pointer;
 }
-#profile form select{
-    width: 80%;
-    height: 34px;
-    background-color:#ffffff;
-    display: inline-block;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
+#submit:hover{
+    color: #fff;
+    background-color: #286090;
+    border-color: #204d74;
+    cursor: pointer;
 }
-#profile textarea{
-    width: 80%;
-}
-
 #clear{
     color: #fff;
     background-color: #d9534f;
@@ -151,9 +172,70 @@ form label{
     vertical-align: middle;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    cursor: pointer;
+}
+#clear:hover{
+    color: #fff;
+    background-color: #c9302c;
+    border-color: #ac2925;
+    cursor: pointer;
+}
+/***** Two Cols For Profile*****/
+#profile-container2 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:30%;
+}
+#profile-container1 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:40%;
+}
+#profile-col1 {
+    float:left;
+    width:50%;
+    position:relative;
+    left:72%;
+    overflow:hidden;
+}
+#profile-col2 {
+    float:left;
+    width:50%;
+    position:relative;
+    left:76%;
+    overflow:hidden;
+}
+#image{
+    max-width: 100%;
+    margin-left: 100px;
+    padding: 20px;
+}
+#image img{
+    border: 2px solid white;
+}
+#description{
+    float: left;
+    margin: 10px;
+    padding-right: 20%;
+    padding-top: 10%;
+    font-size: 23px;
+}
+#wrapper{
+    display: inline-block;
+    background-image: url(./images/transpBlack90.png);
 }
 
 /*****Links Section*****/
+#links a{
+    font-size: 19px;
+    text-align: center;
+}
+span{
+    background-image: url(./images/transpBlack90.png);
+    font-size: 19px;
+}
 #links form input[type=text]{
     float:left;
     width: 50%;
@@ -189,20 +271,80 @@ form label{
     vertical-align: middle;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    cursor: pointer;
 }
-table{
+#post-link:hover{
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+    cursor: pointer;
+}
+#posted-links{
     margin-top: 15px;
+    width: 100%;
     background-image: url(./images/transpBlack90.png);
     border-color: #fff;
     border-style: dotted;
     border-width: 0.5px;
+    display: inline-block;
+}
+#posted-links h3{
+    text-align: center;
+    margin: auto;
+    line-height: 51px;
+    vertical-align: middle;
+}
+#links-container3 {
+    float:left;
+    width:100%;
+    overflow:hidden;
+    position:relative;
+}
+#links-container2 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:30%;
+}
+#links-container1 {
+    float:left;
+    width:100%;
+    position:relative;
+    right:40%;
+}
+#links-col1 {
+    float:left;
+    width:26%;
+    position:relative;
+    left:72%;
+    overflow:hidden;
+}
+#links-col2 {
+    float:left;
+    width:36%;
+    position:relative;
+    left:76%;
+    overflow:hidden;
+}
+#links-col3 {
+    float:left;
+    width:26%;
+    position:relative;
+    left:80%;
+    overflow:hidden;
 }
 
-/******Content*****/
+/******Content Section*****/
 #content textarea{
     width: 80%;
 }
 
+#content p{
+    font-size: 19px;
+}
+#content a{
+    font-size: 22px;
+}
 #update-status{
     margin-right: 7%;
     color: #fff;
@@ -220,11 +362,29 @@ table{
     vertical-align: middle;
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
+    cursor: pointer;
 }
-#posting article{
+#update-status:hover{
+    color: #fff;
+    background-color: #449d44;
+    border-color: #398439;
+    cursor: pointer
+}
+.posting {
     width: 83%;
     margin-left: 100px;
     background-image: url(./images/transpBlack90.png);
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+.posting article{
+    margin-left: 10%;
+    margin-right: 10%;
+    border: 1px solid white;
+    padding: 20px;
+}
+.posting header{
+    padding: 20px;
 }
 
 /***** Footer *****/

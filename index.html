@@ -5,6 +5,19 @@
 
 <head>
 
+<!-- =======================================================================  =>
+*                                                                              *
+*    Blog: Project 2                                                           *
+*    COMI 2010 Client-Side Scripting Languages                                 *
+*    03-09-2016                                                                *
+*                                                                              *
+*    JP Stearns                                                                *
+*                                                                              *
+*    index.html                                                                *
+*                                                                              *
+*    Blog: XHTML page for Project 2                                             *
+*                                                                              *
+<=  ======================================================================== -->
 <title>Web Development Blog</title>
 <link rel="stylesheet" type="text/css" href="assets/styles.css"/>
 <script type="text/javascript", src="assets/scripts.js"></script>
@@ -14,6 +27,8 @@
 </head>
 
 <body>
+
+<!--Nav Bar-->
 <div id="navbar">
 	<div class="container">
 	<div id="logo">
@@ -27,6 +42,8 @@
 		</ul>
 	</div>
 </div>
+
+<!--Profile-->
 <div class="container" id="profile">
 	<div class="pane-body">
 		<div class="container" id="profile-wizard">
@@ -53,24 +70,33 @@
 		</div>
 		<div class="container" id="profile-display">
 			<h2 id="title"></h2>
-			<div id="wrapper">
-				<div id="image" style="display: none; width: 50%;">
-					<img src="imageOne.jpg" alt="Profile Pic" style="max-width:50%; ">
-				</div>
-				<p id="description"></p>
+			<div id="wrapper" style="width:100%; display:none;">
+			    <div id="profile-container2">
+			        <div id="profile-container1">
+			            <div id="profile-col1">
+							<div id="image" style="display: none; width: 50%;">
+							</div>
+			            </div>
+			            <div id="profile-col2">
+							<div id="description">
+							</div>
+			            </div>
+			        </div>
+			    </div>
 			</div>
-
 		</div>
 	</div>
 </div>
+
+<!--Links-->
 <div class="container" id="links">
 	<div class="pane-body">
 		<div class="container">
 			<h2>Web Development Links:</h2>
-			<form>
+			<form id="links-form">
 				<label for="url">Enter Url:</label>
-				<input type="text" name="url" placeholder=" https://example.com">
-				<select>
+				<input type="text" id="url" name="url" placeholder=" https://example.com">
+				<select id="link-types">
 					<option value="">Select Link Type</option>
 					<option value="html">HTML5</option>
 					<option value="css">CSS3</option>
@@ -79,28 +105,34 @@
 				<button type="button" id="post-link" onclick="postLink()">Post Link</button>
 			</form>
 			<br><br>
-			<div class="container">
-				<table style="width:100%">
-					<thead>
-						<tr id="header">
-							<th>HTML5</th>
-							<th>CSS3</th>
-							<th>JavaScript</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr id="html">
-						</tr>
-						<tr id="css">
-						</tr>
-						<tr id="javascript">
-						</tr>
-					</tbody>
-				</table>
+			<div class="container" id="posted-links">
+				<div id="links-container3">
+				    <div id="links-container2">
+				        <div id="links-container1">
+				            <div id="links-col1">
+				            	<h3>HTML5</h3>
+				            	<ul id="html">
+				            	</ul>
+				            </div>
+				            <div id="links-col2">
+				            	<h3>CSS3</h3>
+				            	<ul id="css">
+				            	</ul>
+				            </div>
+				            <div id="links-col3">
+								<h3>JavaScript</h3>
+								<ul id="javascript">
+								</ul>
+				            </div>
+				        </div>
+				    </div>
+				</div>
 			</div>
 		</div>
 	</div>
 </div>
+
+<!--Content-->
 <div class="container" id="content">
 	<div class="pane-body">
 		<div class="container">
@@ -108,28 +140,24 @@
 			<div class="container">
 				<form id="content-form">
 					<label for="status"> New Post: </label>
-					<textarea rows="10" name="status"> Enter a Status Update</textarea><br><br>
-					<input type="radio" name="status-type" value="status" checked="checked"> Status
-					<input type="radio" name="status-type" value="image"> Image
-					<input type="radio" name="status-type" value="link"> Link
+					<textarea id="content-status" rows="10" name="status"> Enter a Status Update</textarea><br><br>
+					<input id="content-rad0" type="radio" name="status-type" value="status" checked="checked"> Status
+					<input id="content-rad1" type="radio" name="status-type" value="image"> Image
+					<input id="content-rad2" type="radio" name="status-type" value="link"> Link
 					<button type="button" id="update-status" onclick="updateStatus()">Update Status</button>
+					<br>
+					<span> **Image Inputs: "my_setup", "my_code", "my_site", my_girl"
 				</form>
 				<br><br>
 			</div>
 			<h2>Content:</h2>
-			<div id="posting">
-				<header>
-
-				</header>
-				<article>
-					<p></p>
-				</article>
+			<div id="content-postings">
 			</div>
 		</div>
 	</div>
 </div>
 
-<!--Footer -->
+<!--Footer-->
 <div class = "footer">
 	<div class = "icons">
 		<ul>
