@@ -43,7 +43,8 @@ body{
 }
 
 #navbar a:hover{
-    background-color: #111;
+    background-image: url("./images/transpBlack10.png");
+    color: #17BB34;
 }
 
 #logo p {
@@ -53,8 +54,13 @@ body{
     font-size: 36px;
     margin: 0;
     padding-top: 10px;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
 }
 
+#logo p:hover{
+    color: #fff;
+}
 
 .pane-body{
     margin-top: 50px;
@@ -72,9 +78,18 @@ body{
 h2{
     text-decoration: underline;
     color: #ffffff;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    font-weight: 300;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
 }
 
-/******Profile From*****/
+/******Profile*****/
+#profile{
+    margin-top: 125vpx;
+}
 form{
     margin-left: 100px;
 }
@@ -92,7 +107,7 @@ form label{
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
 }
-#profile form input[type=submit]{
+#submit{
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
@@ -121,7 +136,7 @@ form label{
     width: 80%;
 }
 
-#profile form button{
+#clear{
     color: #fff;
     background-color: #d9534f;
     border-color: #d43f3a;
@@ -158,7 +173,7 @@ form label{
     -webkit-border-radius: 5px;
     margin-right: 15px;
 }
-#links form input[type=submit]{
+#post-link{
     color: #fff;
     background-color: #5bc0de;
     border-color: #46b8da;
@@ -188,7 +203,7 @@ table{
     width: 80%;
 }
 
-#content input[type=submit]{
+#update-status{
     margin-right: 7%;
     color: #fff;
     background-color: #449d44;
@@ -210,4 +225,36 @@ table{
     width: 83%;
     margin-left: 100px;
     background-image: url(./images/transpBlack90.png);
+}
+
+/***** Footer *****/
+.footer{
+    clear: both;
+    margin-top: 50px;
+    border-top: 1px solid black;
+    font-size: 80%;
+    text-align: center;
+    background: #222;
+    height: 60px;
+    color: #17BB34;
+}
+
+.footer ul li a{
+    text-decoration: none;
+    padding: .2em 1em;
+    color: white;
+}
+
+.footer ul li a:hover{
+    color: #17BB34;
+}
+
+.icons ul li{
+    list-style: none;
+    display: inline;
+}
+
+.icons{
+    width: 50%;
+    margin: 0 auto;
 }

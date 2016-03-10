@@ -9,6 +9,7 @@
 <link rel="stylesheet" type="text/css" href="assets/styles.css"/>
 <script type="text/javascript", src="assets/scripts.js"></script>
 <link rel="icon" type="image/png" href="assets/images/jp.png" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
 </head>
 
@@ -28,14 +29,14 @@
 </div>
 <div class="container" id="profile">
 	<div class="pane-body">
-		<div class="container">
+		<div class="container" id="profile-wizard">
 			<h2>Enter Profile Information:</h2>
-			<form>
+			<form id="profile-form">
 				<label for="title">Title:</label>
-				<input type="text" name="title" placeholder=" Enter Your Profile's Title" />
+				<input type="text" id="profile-title" name="title" placeholder=" Enter Your Profile's Title" />
 				<br><br>
 				<label for="image">Image:</label>
-				<select name="image">
+				<select name="image" id="profile-image">
 					<option value="1">Image One</option>
 					<option value="2">Image Two</option>
 					<option value="3">Image Three</option>
@@ -43,12 +44,22 @@
 				</select>
 				<br><br>
 				<label for="desctiption">Description:</label>
-				<textarea rows="10" name="description"> This is where you can enter a personal description...
+				<textarea id="profile-description" rows="10" name="description"> This is where you can enter a personal description...
 				</textarea>
 				<br><br>
-				<input type="submit" value="Submit"/>
-				<button id="'clear'">Clear</button>
+				<button type = "button" id="submit" onclick="postProfile()"/> Submit </button>
+				<button type = "button" id="clear" onclick="reset()">Clear</button>
 			</form>
+		</div>
+		<div class="container" id="profile-display">
+			<h2 id="title"></h2>
+			<div id="wrapper">
+				<div id="image" style="display: none; width: 50%;">
+					<img src="imageOne.jpg" alt="Profile Pic" style="max-width:50%; ">
+				</div>
+				<p id="description"></p>
+			</div>
+
 		</div>
 	</div>
 </div>
@@ -65,7 +76,7 @@
 					<option value="css">CSS3</option>
 					<option value="javascript">JavaScript</option>
 				</select>
-				<input type="submit" value ="Add Link" />
+				<button type="button" id="post-link" onclick="postLink()">Post Link</button>
 			</form>
 			<br><br>
 			<div class="container">
@@ -95,13 +106,13 @@
 		<div class="container">
 			<h2> Web Dev Blog Update: </h2>
 			<div class="container">
-				<form>
+				<form id="content-form">
 					<label for="status"> New Post: </label>
 					<textarea rows="10" name="status"> Enter a Status Update</textarea><br><br>
-					<input type="radio" name="status-type" value="status"> Status
+					<input type="radio" name="status-type" value="status" checked="checked"> Status
 					<input type="radio" name="status-type" value="image"> Image
 					<input type="radio" name="status-type" value="link"> Link
-					<input type="submit" value="Update Status">
+					<button type="button" id="update-status" onclick="updateStatus()">Update Status</button>
 				</form>
 				<br><br>
 			</div>
@@ -111,11 +122,24 @@
 
 				</header>
 				<article>
-					<p>Hello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello WorldsssssssssssssHello Worldsssssssssssss</p>
+					<p></p>
 				</article>
 			</div>
 		</div>
 	</div>
 </div>
+
+<!--Footer -->
+<div class = "footer">
+	<div class = "icons">
+		<ul>
+		  <li><a href="#"><i class="fa fa-facebook fa-2x"></i></a></li>
+		  <li><a href="#"><i class="fa fa-twitter fa-2x"></i></a></li>
+		  <li><a href="#"><i class="fa fa-linkedin fa-2x"></i></a></li>
+		  <li><a href="#"><i class="fa fa-google-plus fa-2x"></i></a></li>
+		  <li><a href="#"><i class="fa fa-envelope fa-2x"></i></a></li>
+		</ul>
+	</div> 
+</div> 
 </body>
 </html>
