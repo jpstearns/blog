@@ -129,15 +129,15 @@ function updateStatus(){
 	if(rad0.checked){
 		statusText = content;
 		statusHtml +="<article><p>"+statusText+"</p></article></div>";
-		document.getElementById("content-postings").innerHTML += statusHtml;
+		document.getElementById("content-postings").innerHTML = statusHtml + document.getElementById("content-postings").innerHTML;
 	}else if(rad1.checked){
 		statusImage = "<img src='"+content+".jpg' alt='blog-image' style='max-width: 100%;'>";
 		statusHtml += "<article>"+statusImage+"</article></div>";
-		document.getElementById("content-postings").innerHTML += statusHtml;
+		document.getElementById("content-postings").innerHTML = statusHtml + document.getElementById("content-postings").innerHTML;
 	}else{
 		statusLink = "<a href='"+content+"'>"+content+"</a>";
 		statusHtml += "<article>"+statusLink+"</article></div>";
-		document.getElementById("content-postings").innerHTML += statusHtml;
+		document.getElementById("content-postings").innerHTML = statusHtml + document.getElementById("content-postings").innerHTML;
 	}
 
 	//reset the content form
